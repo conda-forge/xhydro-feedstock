@@ -1,5 +1,5 @@
 {% set name = "xhydro" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 {% set python_min = "3.10.0" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xhydro-{{ version }}.tar.gz
-  sha256: 24e5ae8088dd8fe36b096cb6e88dbe05b28283e826004844943caadea3d2f803
+  sha256: 7552a5230aa305b4bcb91b245f18dae166a9b15e4931cc25908da0d61ce191cd
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - dask
     - dask-geopandas
     - geopandas >=1.0
-    - haversine >=2.8.0
+    - haversine >=2.8.1
     - leafmap
     - mapclassify  # Hidden dependency needed to extract watershed delineation using leafmap objects
     - numpy >=1.24
@@ -46,7 +46,7 @@ requirements:
     - xarray >=2023.11.0
     - xarray-spatial >=0.3.7
     - xclim
-    - xscen >=0.12.1,<0.13
+    - xscen >=0.12.1,<0.14
     - xvec
   run_constrained:
     - xdatasets >=0.3.8
