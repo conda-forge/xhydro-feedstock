@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.9,<4
+    - flit-core >=3.11.0,<4
     - pip
   run:
     - python >={{ python_min }}
@@ -29,7 +29,7 @@ requirements:
     - haversine >=2.8.1
     - leafmap
     - mapclassify  # Hidden dependency needed to extract watershed delineation using leafmap objects
-    - numpy >=1.24
+    - numpy >=1.25
     - pandas >=2.2
     - planetary-computer
     - pooch >=1.8.0
@@ -49,6 +49,7 @@ requirements:
     - xscen >=0.12.1,<0.14
     - xvec
   run_constrained:
+    - juliacall >=0.9.20
     - xdatasets >=0.3.8
 
 test:
