@@ -1,5 +1,5 @@
 {% set name = "xhydro" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 {% set python_min = "3.10.0" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/xhydro-{{ version }}.tar.gz
-  sha256: 7552a5230aa305b4bcb91b245f18dae166a9b15e4931cc25908da0d61ce191cd
+  sha256: 98b0fe17fbe2639bae94ec980af936f356d51da3ceb3fb468717f17bf078eed2
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.9,<4
+    - flit-core >=3.11.0,<4
     - pip
   run:
     - python >={{ python_min }}
@@ -29,7 +29,7 @@ requirements:
     - haversine >=2.8.1
     - leafmap
     - mapclassify  # Hidden dependency needed to extract watershed delineation using leafmap objects
-    - numpy >=1.24
+    - numpy >=1.25
     - pandas >=2.2
     - planetary-computer
     - pooch >=1.8.0
@@ -49,6 +49,7 @@ requirements:
     - xscen >=0.12.1,<0.14
     - xvec
   run_constrained:
+    - juliacall >=0.9.20
     - xdatasets >=0.3.8
 
 test:
