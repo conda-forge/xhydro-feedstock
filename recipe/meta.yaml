@@ -23,13 +23,16 @@ requirements:
   run:
     - python >={{ python_min }}
     - cartopy >=0.23.0
+    - clisops
     - dask
     - dask-geopandas
     - geopandas >=1.0
     - haversine >=2.8.1
     - leafmap
     - mapclassify  # Hidden dependency needed to extract watershed delineation using leafmap objects
+    - matplotlib-base
     - numpy >=1.25
+    - packaging
     - pandas >=2.2
     - planetary-computer
     - pooch >=1.8.0
@@ -39,6 +42,8 @@ requirements:
     - rasterio
     - ravenpy >=0.18.1
     - rioxarray >=0.15.0
+    - scipy >=1.12.0
+    - shapely >=2.0
     - spotpy >=1.6.2
     - stackstac >=0.5.1
     - statsmodels >=0.14.0
@@ -46,11 +51,12 @@ requirements:
     - xarray >=2023.11.0
     - xarray-spatial >=0.3.7
     - xclim
-    - xscen >=0.12.1,<0.14
+    - xscen >=0.12.1,<0.15
     - xvec
   run_constrained:
     - juliacall >=0.9.20
-    - xdatasets >=0.3.8
+    - juliapkg >=0.1.15
+    - xdatasets >=0.3.9
 
 test:
   imports:
