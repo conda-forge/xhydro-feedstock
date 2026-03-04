@@ -33,6 +33,7 @@ requirements:
     - mapclassify  # Hidden dependency needed to extract watershed delineation using leafmap objects
     - matplotlib-base
     - numpy >=1.25
+    - odc-stac
     - packaging
     - pandas >=2.2
     - planetary-computer
@@ -68,17 +69,19 @@ test:
   requires:
     - python {{ python_min }}
     - pip
-    - lmoments3  # needed for test_regional.py
-    - pytest >=8.3.2
+    - lmoments3 >=1.0.7  # needed for test_regional.py
+    - pytest >=9.0.2
     - pytest-xdist >=3.2.0
-    - xdatasets >=0.3.8  # needed for test_gis.py
+    - python-dotenv >=1.2.1
+    - requests
+    - xdatasets >=0.3.9  # needed for test_gis.py
   source_files:
     - CHANGELOG.rst
     - pyproject.toml
     - tests
 
 about:
-  home: https://github.com/hydrologie/xdatasets
+  home: https://github.com/hydrologie/xhydro
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
