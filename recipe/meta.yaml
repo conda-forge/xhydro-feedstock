@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - python {{ python_min }}
-    - flit-core >=3.11.0,<4
+    - flit-core >=3.12.0,<4
     - pip >=25.2
   run:
     - python >={{ python_min }}
@@ -34,8 +34,7 @@ requirements:
     - matplotlib-base
     - numpy >=1.25
     - odc-stac
-    - packaging
-    - pandas >=2.2
+    - pandas >=2.2,!=3.0.4
     - planetary-computer
     - pooch >=1.8.0
     - pystac >=1.12.0
@@ -44,6 +43,7 @@ requirements:
     - rasterio
     - ravenpy >=0.18.1
     - rioxarray >=0.15.0
+    - scikit-learn
     - scipy >=1.12.0
     - shapely >=2.0
     - spotpy >=1.6.2
@@ -56,7 +56,7 @@ requirements:
     - xvec
   run_constrained:
     - juliacall >=0.9.20
-    - juliapkg >=0.1.15
+    - juliapkg >=0.1.19
     - xdatasets >=0.3.9
 
 test:
