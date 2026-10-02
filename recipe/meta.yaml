@@ -1,6 +1,5 @@
 {% set name = "xhydro" %}
 {% set version = "0.9.1" %}
-{% set python_min = "3.11.0" %}
 
 package:
   name: {{ name|lower }}
@@ -62,7 +61,7 @@ test:
   imports:
     - xhydro
   commands:
-    # - pip check # PyCRS gives a false positive here
+    - pip check || true # PyCRS gives a false positive here
     - pytest tests
   requires:
     - python {{ python_min }}
