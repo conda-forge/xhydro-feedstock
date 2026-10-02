@@ -54,7 +54,7 @@ requirements:
     - xclim
     - xscen >=0.12.1,<0.16
     - xvec
-  run_constrained
+  run_constrained:
     - juliacall >=0.9.20
     - juliapkg >=0.1.19
 
