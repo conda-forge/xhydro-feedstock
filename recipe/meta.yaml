@@ -61,7 +61,7 @@ test:
   imports:
     - xhydro
   commands:
-    - pip check || true # PyCRS gives a false positive here
+    - pip check
     - pytest tests
   requires:
     - python {{ python_min }}
